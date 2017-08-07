@@ -50,8 +50,8 @@ class Ltl2baParser:
     prog_node = re.compile('^([^_]+?)_([^_]+?):$')
     prog_edge = re.compile('^\s+:: (.+?) -> goto (.+?)$')
     prog_skip = re.compile('^\s+(?:skip)$')
-    prog_ignore = re.compile('^\s+(?:do)|(?:if)|(?:od)|'
-                             '(?:fi)|(?:})|(?:\tfalse);?$')
+    prog_ignore = re.compile('(?:^\s+do)|(?:^\s+if)|(?:^\s+od)|'
+                             '(?:^\s+fi)|(?:})|(?:^\s+false);?$')
 
     @staticmethod
     def parse(ltl2ba_output, ignore_title=True):
