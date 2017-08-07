@@ -111,7 +111,7 @@ the following graph is also generated:
 
 # Contributors
 
-This project is authored by [Patrick Trentin](www.patricktrentin.com) (<patrick.trentin.88@gmail.com>).
+This project is authored by [Patrick Trentin](http://www.patricktrentin.com) (<patrick.trentin.88@gmail.com>).
 
 # License
 
