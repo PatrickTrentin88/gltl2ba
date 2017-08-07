@@ -48,8 +48,9 @@ class Graph:
 class Ltl2baParser:
     prog_title = re.compile('^never\s+{\s+/\* (.+?) \*/$')
     prog_node = re.compile('^([^_]+?)_([^_]+?):$')
-    prog_ignore = re.compile('^\s+(?:[do|if])|(?:[od|fi];)|(?:})|(?:)$')
     prog_edge = re.compile('^\s+:: (.+?) -> goto (.+?)$')
+    prog_skip = re.compile('^\s+(?:skip)$')
+    prog_ignore = re.compile('^\s+(?:[do|if])|(?:[od|fi];)|(?:})|(?:)$')
 
     @staticmethod
     def parse(ltl2ba_output, ignore_title=True):
@@ -68,6 +69,9 @@ class Ltl2baParser:
                 dst_node, label = Ltl2baParser.get_edge(line)
                 assert src_node is not None
                 graph.edge(src_node, dst_node, label)
+            elif Ltl2baParser.is_skip(line):
+                assert src_node is not None
+                graph.edge(src_node, src_node, "(1)")
             elif Ltl2baParser.is_ignore(line):
                 pass
             else:
@@ -105,6 +109,10 @@ class Ltl2baParser:
         assert Ltl2baParser.is_edge(line)
         label, dst_node = Ltl2baParser.prog_edge.search(line).groups()
         return (dst_node, label)
+
+    @staticmethod
+    def is_skip(line):
+        return Ltl2baParser.prog_skip.match(line) is not None
 
     @staticmethod
     def is_ignore(line):
