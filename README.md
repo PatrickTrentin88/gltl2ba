@@ -13,7 +13,7 @@ All the rest remains equal with the **ltl2ba** tool.
 
 The website of [**ltl2ba**](http://www.lsv.fr/~gastin/ltl2ba/index.php) already provides several options for generating and displaying Buchi Automatons starting from an ltl formula. However, this functionality is not included in **ltl2ba** and it is not available when offline.
 
-The motivation of **gltl2ba** is to provide an alternative mean to generate Buchi Automaton figures when an internet connection is not available.
+The motivation of **gltl2ba** is to provide an alternative mean to generate Buchi Automaton graphs when an internet connection is not available.
 
 # Installation
 
