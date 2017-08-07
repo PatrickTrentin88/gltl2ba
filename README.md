@@ -11,9 +11,9 @@ All the rest remains equal with the **ltl2ba** tool.
 
 # Motivation
 
-The website of [ltl2ba](http://www.lsv.fr/~gastin/ltl2ba/index.php) already provides several options for generating and displaying Buchi Automatons starting from an ltl formula. However, this functionality is not available when offline.
+The website of [**ltl2ba**](http://www.lsv.fr/~gastin/ltl2ba/index.php) already provides several options for generating and displaying Buchi Automatons starting from an ltl formula. However, this functionality is not available when offline.
 
-This wrapper for **ltl2ba** was conceived as an alternative mean for achieving the same goal when an internet connection is not available.
+This tool was motivated by the need of providing an alternative to **ltl2ba**'s website when an internet connection is not available.
 
 # Installation
 
