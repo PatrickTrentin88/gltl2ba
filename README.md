@@ -1,6 +1,6 @@
 # Synopsis
 
-**gtltl2ba** tool enhances **ltl2ba** with the following features:
+**gltl2ba** tool enhances **ltl2ba** with the following features:
 
 - `-g`: display Buchi Automaton on screen
 - `-G file_name`: save Buchi Automaton as `file_name.pdf`
@@ -11,9 +11,9 @@ All the rest remains equal with the **ltl2ba** tool.
 
 # Motivation
 
-The website of [**ltl2ba**](http://www.lsv.fr/~gastin/ltl2ba/index.php) already provides several options for generating and displaying Buchi Automatons starting from an ltl formula. However, this functionality is not available when offline.
+The website of [**ltl2ba**](http://www.lsv.fr/~gastin/ltl2ba/index.php) already provides several options for generating and displaying Buchi Automatons starting from an ltl formula. However, this functionality is not included in **ltl2ba** and it is not available when offline.
 
-This tool was motivated by the need of providing an alternative to **ltl2ba**'s website when an internet connection is not available.
+The motivation of **gltl2ba** is to provide an alternative mean to generate Buchi Automaton figures when an internet connection is not available.
 
 # Installation
 
