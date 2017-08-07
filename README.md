@@ -63,6 +63,35 @@ to contain the paths for **ltl2ba** and **gltl2ba**.
       -T OUTPUT_DOT, --output-dot OUTPUT_DOT
                             save buchi automaton graph in DOT file
 
+# LTL Formulas
+
+An LTL formula may contain propositional symbols, boolean operators, temporal operators, and parentheses.
+
+- Propositonal Symbols:
+
+      true, false
+      any lowercase string
+
+- Boolean operators:
+
+      !   (negation)
+      ->  (implication)
+      <-> (equivalence)
+      &&  (and)
+      ||  (or)
+
+- Temporal operators:
+
+      G   (always) (Spin syntax : [])
+      F   (eventually) (Spin syntax : <>)
+      U   (until)
+      R   (realease) (Spin syntax : V)
+      X   (next)
+
+Use spaces between any symbols. 
+
+*(credits: [ltl2ba webpage](http://www.lsv.fr/~gastin/ltl2ba/index.php))*
+
 # Example
 
 To generate the Buchi Automaton of `([] p0) || (<> p1)`, type:
