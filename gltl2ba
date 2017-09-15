@@ -216,8 +216,7 @@ def get_ltl_formula(file, formula):
     assert file is not None or formula is not None
     if file:
         try:
-            with open(file, 'r') as fd:
-                ltl = fd.read()
+            ltl = file.read()
         except Exception as e:
             eprint("{}: {}".format(__main__.__file__, str(e)))
             sys.exit(1)
